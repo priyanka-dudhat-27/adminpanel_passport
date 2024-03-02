@@ -1,0 +1,78 @@
+<%-include('header')%>
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Profile</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="/admin/">Dashboard</a></li>
+                            <li><a href="/admin/addAdmin">Add</a></li>
+                            <li><a href="/admin/viewAdmin">view</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+        
+        <div class="col-lg-12">
+            <div class="card">
+                <img src="<%=adminData.image%>" style="border-radius: 50%;width: 200px;height: 200px;">
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                              <td scope="col">Name</td>
+                              <td><%=locals.admin.name%></td>
+                              </tr>
+                              <tr>
+                              <td scope="col">Email</td>
+                              <td><%=adminData.email%></td>
+                              </tr>
+                              <tr>
+                                <td scope="col">City</td>
+                                <td><%=adminData.city%></td>
+                              </tr>
+                             
+                              <tr>
+                                <td scope="col">Gender</td>
+                                <td><%=adminData.gender%></td>
+                            </tr>
+                             <tr>
+                                <td scope="col">Hobby</td>
+                                <td><%=adminData.hobby%></td>
+                             </tr>
+                            <tr>
+                                <td><a href="/admin/updateRecord/<%=adminData.id%>" class="text-primary"><i class="fa fa-edit text-primary"></i>Edit Profile</a></td>
+                            </tr>
+                      </thead>
+                     
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+</div><!-- .animated -->
+</div><!-- .content -->
+
+<div class="clearfix"></div>
+<%-include('footer')%>
